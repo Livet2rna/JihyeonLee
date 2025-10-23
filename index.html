@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jihyeon — Portfolio</title>
+  <meta name="description" content="연구/개인 작업을 정리하는 1페이지 포트폴리오" />
+  <meta property="og:title" content="Jihyeon — Portfolio" />
+  <meta property="og:description" content="연구/개인 작업을 정리하는 1페이지 포트폴리오" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jihyeon4217.github.io" />
+  <style>
+    :root{
+      --bg:#0b0c10; --muted:#111217; --card:#0f1115; --text:#e6e6e6; --dim:#a7a7a7; --acc:#6ee7ff;
+      --max:1080px; --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Helvetica,Arial,sans-serif; color:var(--text); background:radial-gradient(1200px 600px at 80% -20%,#10233300,#10233380), var(--bg)}
+    a{color:var(--acc); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{position:sticky; top:0; backdrop-filter:saturate(120%) blur(8px); background:#0b0c10bf; border-bottom:1px solid #1a1d22; z-index:10}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 24px}
+    .brand{font-weight:700; letter-spacing:.2px}
+    .menu{display:flex; gap:16px; flex-wrap:wrap}
+    .btn{display:inline-block; padding:10px 14px; border:1px solid #2a2f37; border-radius:12px; background:#0f1115; transition:.2s}
+    .btn:hover{transform:translateY(-1px); border-color:#3a404b}
+    .hero{padding:72px 24px 32px}
+    .hero h1{font-size:40px; line-height:1.15; margin:0 0 12px}
+    .hero p{color:var(--dim); margin:0 0 20px}
+    .badges{display:flex; gap:8px; flex-wrap:wrap}
+    .badge{padding:6px 10px; border:1px solid #2a2f37; border-radius:999px; font-size:13px; color:#cfd3d7}
+    section{padding:28px 24px}
+    .card{background:var(--card); border:1px solid #1c2129; border-radius:var(--radius); padding:18px}
+    .grid{display:grid; gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .kicker{font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#9aa0a6; margin-bottom:8px}
+    h2{margin:0 0 12px; font-size:22px}
+    h3{margin:0 0 8px; font-size:18px}
+    .list{display:grid; gap:10px}
+    footer{padding:32px 24px; color:#8b9198; border-top:1px solid #1a1d22}
+    .row{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+    .avatar{width:72px; height:72px; border-radius:16px; background:#1e2630; display:grid; place-items:center; font-weight:700; border:1px solid #2a2f37}
+    .muted{color:#9aa0a6}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13px}
+    .proj{display:flex; flex-direction:column; gap:10px}
+    .proj .meta{font-size:13px; color:#9aa0a6}
+    .proj a.btn{align-self:flex-start}
+    .divider{height:1px; background:#1a1d22; margin:20px 0}
+    @media (max-width:900px){.grid.cols-3{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}; .hero h1{font-size:32px}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav wrap">
+      <div class="brand">Jihyeon</div>
+      <div class="menu">
+        <a href="#about" class="btn">About</a>
+        <a href="#projects" class="btn">Projects</a>
+        <a href="#posts" class="btn">Posts</a>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero card">
+      <div class="row">
+        <div class="avatar">JL</div>
+        <div>
+          <h1>기계공학 · 진동/구조동역학</h1>
+          <p>연구, 코딩, 실험을 기록한다. GitHub Pages로 빌드된 깔끔한 1페이지.</p>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">MATLAB</span>
+            <span class="badge">TPA / ISO 20270</span>
+            <span class="badge">Data analysis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="kicker">About</div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h2>소개</h2>
+          <p class="muted">대학원에서 유압 순환 시스템의 MIV load identification을 연구한다. 논문, 코드, 실험 기록을 공개한다.</p>
+          <ul class="list">
+            <li class="mono">관심: Dynamic substructuring, LM-FBS, TSVD</li>
+            <li class="mono">도구: Python, MATLAB, LaTeX, Illustrator</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>링크</h2>
+          <ul class="list">
+            <li><a href="https://github.com/jihyeon4217" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="#" target="_blank" rel="noreferrer">Google Scholar</a></li>
+            <li><a href="#" target="_blank" rel="noreferrer">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="kicker">Projects</div>
+      <div class="grid cols-3">
+        <article class="card proj">
+          <h3>MIV Load Identification</h3>
+          <p class="muted">ISO 20270 기반 in‑situ TPA와 TSVD를 이용한 하중 식별.</p>
+          <div class="meta">2025 · MATLAB, Python</div>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">코드 보기</a>
+        </article>
+        <article class="card proj">
+          <h3>Hydraulic Pump Bench</h3>
+          <p class="muted">소형 펌프 실험 벤치 구축과 계측 자동화.</p>
+          <div class="meta">2025 · DAQ, Signal Processing</div>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">문서 보기</a>
+        </article>
+        <article class="card proj">
+          <h3>Vibration Toolkit</h3>
+          <p class="muted">FRF, 임피던스/모빌리티 계산, 모드 중첩.</p>
+          <div class="meta">2024 · Python</div>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">패키지</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="posts">
+      <div class="kicker">Posts</div>
+      <div class="grid">
+        <article class="card">
+          <h3>[노트] Mode superposition로 보는 FRF</h3>
+          <p class="muted">모드 도메인과 주파수 도메인의 연결 정리.</p>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">읽기</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="kicker">Contact</div>
+      <div class="card">
+        <p>협업이나 문의는 <a href="mailto:jihyeon4217@gmail.com">jihyeon4217@gmail.com</a> 으로 연락.</p>
+        <div class="divider"></div>
+        <p class="mono">배포: GitHub → Settings → Pages → Branch = main</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="row">
+      <span>© <span id="y"></span> Jihyeon</span>
+      <span class="muted">Built with GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
